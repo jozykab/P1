@@ -240,7 +240,7 @@ Patch Requests
     Dictionary Should Contain Value    ${resp.json()['form']}    evcimen
 
 Get Request With Redirection
-    [Tags]  get
+    [Tags]  get  disabled
     Create Session  httpbin  http://httpbin.org    debug=3
 
     ${resp}=  Get Request  httpbin  /redirect/1
