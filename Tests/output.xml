@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160505 15:09:14.415" generator="Robot 3.0 (Python 2.7.11 on win32)">
+<suite source="c:\Users\206467959\PycharmProjects\P1\Tests\testCucumber1.robot" id="s1" name="testCucumber1">
+<test id="s1-t1" name="Choose Site">
+<kw name="Given User navigates on MPS Home page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:14.527" level="INFO">Opening browser 'ff' to base url 'http://o-stage-mps.nbcuni.com'</msg>
+<status status="PASS" endtime="20160505 15:09:18.387" starttime="20160505 15:09:14.527"></status>
+</kw>
+<kw name="Sitechooser Page Should Be Open" library="resourceFile">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>MPS (stage) Sitechooser</arg>
+</arguments>
+<msg timestamp="20160505 15:09:18.403" level="INFO">Page title is 'MPS (stage) Sitechooser'.</msg>
+<status status="PASS" endtime="20160505 15:09:18.403" starttime="20160505 15:09:18.387"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:18.403" starttime="20160505 15:09:18.387"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:18.404" starttime="20160505 15:09:14.527"></status>
+</kw>
+<kw name="When User clicks on a site">
+<kw name="Selectect Site" library="resourceFile">
+<arguments>
+<arg>test-web</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${siteXpath}</arg>
+<arg>xxx</arg>
+<arg>${site}</arg>
+</arguments>
+<assign>
+<var>${sitePath}</var>
+</assign>
+<msg timestamp="20160505 15:09:18.405" level="INFO">${sitePath} = //a[contains(@href, 'test-web')]</msg>
+<status status="PASS" endtime="20160505 15:09:18.405" starttime="20160505 15:09:18.405"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sitePath}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:18.405" level="INFO">Clicking element '//a[contains(@href, 'test-web')]'.</msg>
+<status status="PASS" endtime="20160505 15:09:18.981" starttime="20160505 15:09:18.405"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:18.981" starttime="20160505 15:09:18.404"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:18.981" starttime="20160505 15:09:18.404"></status>
+</kw>
+<kw name="Then User should be promted to login">
+<kw name="Auth Page Should Be Open" library="resourceFile">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>${homePageLoginButton}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:18.983" level="INFO">Verifying element '//*[@id="maincontent"]/div/a/img' is visible.</msg>
+<status status="PASS" endtime="20160505 15:09:19.010" starttime="20160505 15:09:18.982"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>MPS (stage) Authenticate • Oauth2</arg>
+</arguments>
+<msg timestamp="20160505 15:09:19.015" level="INFO">Page title is 'MPS (stage) Authenticate • Oauth2'.</msg>
+<status status="PASS" endtime="20160505 15:09:19.015" starttime="20160505 15:09:19.010"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:19.016" starttime="20160505 15:09:18.982"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:19.016" starttime="20160505 15:09:18.982"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>scrcap/selectsite.png</arg>
+</arguments>
+<msg timestamp="20160505 15:09:19.069" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="scrcap/selectsite.png"&gt;&lt;img src="scrcap/selectsite.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160505 15:09:19.069" starttime="20160505 15:09:19.016"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160505 15:09:19.183" starttime="20160505 15:09:19.070"></status>
+</kw>
+<doc>Selecting a site</doc>
+<tags>
+<tag>login</tag>
+</tags>
+<status status="PASS" endtime="20160505 15:09:19.183" critical="yes" starttime="20160505 15:09:14.526"></status>
+</test>
+<test id="s1-t2" name="Log In">
+<kw name="Given User is on MPS Site choose page">
+<kw name="User navigates on MPS Home page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:19.186" level="INFO">Opening browser 'ff' to base url 'http://o-stage-mps.nbcuni.com'</msg>
+<status status="PASS" endtime="20160505 15:09:22.988" starttime="20160505 15:09:19.186"></status>
+</kw>
+<kw name="Sitechooser Page Should Be Open" library="resourceFile">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>MPS (stage) Sitechooser</arg>
+</arguments>
+<msg timestamp="20160505 15:09:23.002" level="INFO">Page title is 'MPS (stage) Sitechooser'.</msg>
+<status status="PASS" endtime="20160505 15:09:23.002" starttime="20160505 15:09:22.989"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:23.003" starttime="20160505 15:09:22.988"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:23.003" starttime="20160505 15:09:19.186"></status>
+</kw>
+<kw name="User clicks on a site">
+<kw name="Selectect Site" library="resourceFile">
+<arguments>
+<arg>test-web</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${siteXpath}</arg>
+<arg>xxx</arg>
+<arg>${site}</arg>
+</arguments>
+<assign>
+<var>${sitePath}</var>
+</assign>
+<msg timestamp="20160505 15:09:23.005" level="INFO">${sitePath} = //a[contains(@href, 'test-web')]</msg>
+<status status="PASS" endtime="20160505 15:09:23.005" starttime="20160505 15:09:23.004"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sitePath}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:23.005" level="INFO">Clicking element '//a[contains(@href, 'test-web')]'.</msg>
+<status status="PASS" endtime="20160505 15:09:23.620" starttime="20160505 15:09:23.005"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:23.620" starttime="20160505 15:09:23.003"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:23.620" starttime="20160505 15:09:23.003"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:23.620" starttime="20160505 15:09:19.185"></status>
+</kw>
+<kw name="When User clicks on log in">
+<kw name="Go To Login Page" library="resourceFile">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${homePageLoginButton}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:23.621" level="INFO">Clicking element '//*[@id="maincontent"]/div/a/img'.</msg>
+<status status="PASS" endtime="20160505 15:09:24.580" starttime="20160505 15:09:23.621"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resourceFile">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Sign in - Google Accounts</arg>
+</arguments>
+<msg timestamp="20160505 15:09:24.587" level="INFO">Page title is 'Sign in - Google Accounts'.</msg>
+<status status="PASS" endtime="20160505 15:09:24.588" starttime="20160505 15:09:24.581"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:24.588" starttime="20160505 15:09:24.580"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:24.588" starttime="20160505 15:09:23.621"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:24.588" starttime="20160505 15:09:23.621"></status>
+</kw>
+<kw name="And User should be promted to enter username">
+<kw name="Input Username" library="resourceFile">
+<arguments>
+<arg>nbcuniqatest@gmail.com</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${usernamefield}</arg>
+</arguments>
+<status status="PASS" endtime="20160505 15:09:24.608" starttime="20160505 15:09:24.589"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${userNameField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:24.609" level="INFO">Typing text 'nbcuniqatest@gmail.com' into text field '//*[@id='Email']'</msg>
+<status status="PASS" endtime="20160505 15:09:24.697" starttime="20160505 15:09:24.608"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${nextbutton}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:24.697" level="INFO">Clicking button '//*[@id="next"]'.</msg>
+<status status="PASS" endtime="20160505 15:09:24.811" starttime="20160505 15:09:24.697"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:24.812" starttime="20160505 15:09:24.589"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:24.812" starttime="20160505 15:09:24.589"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>scrcap/login1.png</arg>
+</arguments>
+<msg timestamp="20160505 15:09:24.895" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="scrcap/login1.png"&gt;&lt;img src="scrcap/login1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160505 15:09:24.895" starttime="20160505 15:09:24.812"></status>
+</kw>
+<kw name="And User should be promted to enter password">
+<kw name="Input Password" library="resourceFile">
+<arguments>
+<arg>Fall$2014</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${passwordfield}</arg>
+</arguments>
+<status status="PASS" endtime="20160505 15:09:25.222" starttime="20160505 15:09:24.896"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordfield}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:25.223" level="INFO">Typing text 'Fall$2014' into text field '//*[@id='Passwd']'</msg>
+<status status="PASS" endtime="20160505 15:09:25.285" starttime="20160505 15:09:25.222"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${signinbutton}</arg>
+</arguments>
+<msg timestamp="20160505 15:09:25.285" level="INFO">Clicking button '//*[@id="signIn"]'.</msg>
+<status status="PASS" endtime="20160505 15:09:25.711" starttime="20160505 15:09:25.285"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:25.711" starttime="20160505 15:09:24.896"></status>
+</kw>
+<status status="PASS" endtime="20160505 15:09:25.712" starttime="20160505 15:09:24.896"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>scrcap/login2.png</arg>
+</arguments>
+<msg timestamp="20160505 15:09:25.780" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="scrcap/login2.png"&gt;&lt;img src="scrcap/login2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160505 15:09:25.780" starttime="20160505 15:09:25.712"></status>
+</kw>
+<kw name="Then user should be logged into MPS Admin">
+<kw name="Home Page Should Be Open" library="resourceFile">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>MPS (stage) Master Page Service</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160505 15:09:25.840" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160505 15:09:25.840" starttime="20160505 15:09:25.786"></status>
+</kw>
+<msg timestamp="20160505 15:09:25.841" level="FAIL">Title should have been 'MPS (stage) Master Page Service' but was 'Sign in - Google Accounts'</msg>
+<status status="FAIL" endtime="20160505 15:09:25.841" starttime="20160505 15:09:25.781"></status>
+</kw>
+<status status="FAIL" endtime="20160505 15:09:25.841" starttime="20160505 15:09:25.781"></status>
+</kw>
+<status status="FAIL" endtime="20160505 15:09:25.841" starttime="20160505 15:09:25.781"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160505 15:09:25.989" starttime="20160505 15:09:25.842"></status>
+</kw>
+<doc>Logging In MPS</doc>
+<tags>
+<tag>login</tag>
+</tags>
+<status status="FAIL" endtime="20160505 15:09:25.989" critical="yes" starttime="20160505 15:09:19.185">Title should have been 'MPS (stage) Master Page Service' but was 'Sign in - Google Accounts'</status>
+</test>
+<status status="FAIL" endtime="20160505 15:09:25.992" starttime="20160505 15:09:14.418"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="1">login</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="testCucumber1" pass="1">testCucumber1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

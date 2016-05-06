@@ -1,0 +1,12 @@
+APPIUMSERVER = "${APPIUMSAUCE}"
+LOCALAPPIUMSERVER = "http://127.0.0.1:4723/wd/hub"
+appRemoteSource = "sauce-storage:mps.apk"
+appiumVersion = "1.5.1"
+deviceName = "Samsung Galaxy S4 Emulator"
+browserName = ""
+platformVersion = "4.4"
+platformName = "Android"
+appLocalSource = "C:/Users/206467959/Downloads/mps.apk"
+package = "com.test.mps.mpstest"
+appActivity = "MainActivity"
+
